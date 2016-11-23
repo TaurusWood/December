@@ -1,6 +1,6 @@
 {
   "name": "activity",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "the payment activity based on Tmall in MBP",
   "main": "gulpfile.js",
   "scripts": {
