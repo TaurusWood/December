@@ -1,7 +1,7 @@
 section.parts.part-one#part-1
   mixin panel-template-title('超值尖货')
-  include ./navigation.jade
   .part-content
+    include ./navigation
     each item,i in partOne
       mixin panel-template-1(item, i)
 

@@ -102,7 +102,7 @@
             border-radius: 5px
             margin: auto;
             background-image: url(./images/sprite.png);
-            background-position: -610px -220px;
+            background-position: -610px -226px;
             width: 6px;
             height: 10px;
     .panel-0
@@ -110,69 +110,81 @@
       margin-left: 0 !important
 
 // the component of side navigation
-.nav
-  width: 110px
-  height: 630px
-  border-top-left-radius: 55px
-  border-top-right-radius: 55px
-  background-color: #9E00F3
-  color: #FFF
-  absolute: top 60px right -120px
-  .header
-    position: relative;
-    height: 70px
-    i.hole
-      display: block;
-      margin: 5px auto
-      width: 15px
-      height: 15px
-      background-color: #651EBE
-      border-radius: 8px
-    i.balloon
-      absolute: top -104px left 14px
-      background: url('./images/sprite.png')
-      background-position: -501px -474px;
-      width: 135px;
-      height: 161px;
-    p.title
-      margin-top: 30px
-      font-size: 20px
-  .content
-    a
-      color: #FFF
-      font-size: 12px
-      font-family: SimSun !important
-    ul
-      li
-        text-align: center
-        height: 30px
-        line-height: 30px
-        a
-          transition: background-color 0.7s, color 0.7s
-          &:hover
-            background-color: #FFFF01
-            color: #171C18
-    .re-top
-      margin-top: 25px
-      text-align: center;
-      i.icon-arrow-up
+aside
+  position: relative
+  // width: 1px
+  // height: 1px
+  float: right;
+  .nav
+    width: 110px
+    height: 630px
+    margin-left: 10px
+    border-top-left-radius: 55px
+    border-top-right-radius: 55px
+    background-color: #9E00F3
+    color: #FFF
+    absolute: top -5px
+    .header
+      position: relative;
+      height: 70px
+      i.hole
         display: block;
-        background-image: url('./images/sprite.png');
-        background-position: -610px -220px;
-        width: 10px;
-        height: 6px;
         margin: 5px auto
-      span
+        width: 15px
+        height: 15px
+        background-color: #651EBE
+        border-radius: 8px
+      i.balloon
+        absolute: top -104px left 14px
+        background: url('./images/sprite.png')
+        background-position: -501px -474px;
+        width: 135px;
+        height: 161px;
+      p.title
+        margin-top: 30px
+        font-size: 20px
+    .content
+      a
+        color: #FFF
         font-size: 12px
-  .footer
-    padding: 10px
-    height: 136px
-    background-color: #5D008F
-    margin-top: 15px
-    .QRcode
-      width: 90px
-      height: 90px
-    p
-      margin: 10px auto;
-      text-align: center;
-      font-family: SimSun
+        font-family: SimSun !important
+      ul
+        li
+          text-align: center
+          height: 30px
+          line-height: 30px
+          a
+            transition: background-color 0.7s, color 0.7s
+            &:hover
+              background-color: #FFFF01
+              color: #171C18
+              box-shadow: 0 0 2px 1px #FFFF01
+            &:active
+              box-shadow: inset 0 0 2px 1px #9E00F3
+            &.active
+              background-color: #FFFF01
+              color: #171C18
+      .re-top
+        margin-top: 25px
+        text-align: center;
+        i.icon-arrow-up
+          display: block;
+          background-image: url('./images/sprite.png');
+          background-position: -610px -220px;
+          width: 10px;
+          height: 6px;
+          margin: 5px auto
+        span
+          font-size: 12px
+    .footer
+      padding: 10px
+      height: 136px
+      background-color: #5D008F
+      margin-top: 15px
+      .QRcode
+        width: 90px
+        height: 90px
+      p
+        margin: 10px auto;
+        text-align: center;
+        font-family: SimSun
