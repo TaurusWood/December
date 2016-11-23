@@ -1,0 +1,26 @@
+section.parts.part-one#part-1
+  mixin panel-template-title('超值尖货')
+  include ./navigation.jade
+  .part-content
+    each item,i in partOne
+      mixin panel-template-1(item, i)
+
+section.parts.part-two#part-2
+  mixin panel-template-title('超级大牌')
+  .part-content
+    each item,i in partTwo
+      mixin panel-template-1(item, i)
+
+section.parts.part-main
+  mixin panel-template-title('精选会场')
+  each group,index in partMain
+    .section(class="section-#{index}" id="section-#{index}")
+      .part-content
+        each item,i in group
+          mixin panel-template-2(item, i)
+
+section.parts.part-last#part-last
+  mixin panel-template-title('特殊会场')
+  .part-content
+    each item,i in partLast
+      mixin panel-template-1(item, i, 'last')

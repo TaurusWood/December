@@ -1,0 +1,84 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-arrow-right {
+  background-image: url(sprite.png);
+  background-position: -610px -226px;
+  width: 6px;
+  height: 10px;
+}
+.icon-arrow-up {
+  background-image: url(sprite.png);
+  background-position: -610px -220px;
+  width: 10px;
+  height: 6px;
+}
+.icon-balloon {
+  background-image: url(sprite.png);
+  background-position: -501px -474px;
+  width: 135px;
+  height: 161px;
+}
+.icon-btn-go {
+  background-image: url(sprite.png);
+  background-position: -501px -685px;
+  width: 55px;
+  height: 55px;
+}
+.icon-circle-arrow-btn {
+  background-image: url(sprite.png);
+  background-position: -556px -685px;
+  width: 80px;
+  height: 36px;
+}
+.icon-full-page-left {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 501px;
+  height: 7555px;
+}
+.icon-full-page-right {
+  background-image: url(sprite.png);
+  background-position: 0px -7555px;
+  width: 412px;
+  height: 7565px;
+}
+.icon-surge-big-left {
+  background-image: url(sprite.png);
+  background-position: -501px -220px;
+  width: 109px;
+  height: 254px;
+}
+.icon-surge-big-right {
+  background-image: url(sprite.png);
+  background-position: -501px 0px;
+  width: 155px;
+  height: 220px;
+}
+.icon-surge-left {
+  background-image: url(sprite.png);
+  background-position: -563px -635px;
+  width: 61px;
+  height: 49px;
+}
+.icon-surge-right {
+  background-image: url(sprite.png);
+  background-position: -501px -635px;
+  width: 62px;
+  height: 50px;
+}

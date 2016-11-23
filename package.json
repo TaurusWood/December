@@ -1,0 +1,43 @@
+{
+  "name": "activity",
+  "version": "0.0.1",
+  "description": "the payment activity based on Tmall in MBP",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaurusWood/December.git"
+  },
+  "keywords": [
+    "Online retailers",
+    "payment"
+  ],
+  "author": "taurusWood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TaurusWood/December/issues"
+  },
+  "homepage": "https://github.com/TaurusWood/December#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-buffer": "0.0.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-data": "^1.2.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-rev": "^7.1.2",
+    "gulp-sequence": "^0.4.6",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp.spritesmith": "^6.2.1",
+    "merge-stream": "^1.0.0"
+  }
+}

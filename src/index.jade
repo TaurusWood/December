@@ -1,0 +1,68 @@
+doctype html
+html
+	head
+		title 史雯露大馍王-双十二妙品吧狂欢购物节
+		meta(name="keywords", content="妙品吧、双十二、狂欢购物")
+		meta(name="description", content="妙品全球狂欢购物节，史雯露大魔王")
+		link(rel="stylesheet", href="./december.css")
+		
+	mixin panel-template-title(title)
+		.panel-title
+			i.icon-surge.left
+			i.icon-surge.right
+			.title
+				span.side [
+				h4= title
+				span.side ]
+
+	mixin panel-template-top(info, index)
+		.panel(class='panel-#{index}')
+			img.img-goods(src="#{info.src}")
+			p.activity
+			p.discount
+			- if (info.price)
+				span.price= info.price
+			a.btn-go(href="javascript:void(0);", target="_blank")
+			
+	mixin panel-template-1(info, index, last)
+		.panel(class='panel-#{index}')
+			a(href="#{info.link}" target="_blank")
+				.img-goods
+					img(src="#{info.goods}")
+				.goods-info
+					unless last
+						img.img-logo(src="#{info.logo}")
+					p.store.text-center= info.store
+					p.discount.text-center= info.discount
+			
+	mixin panel-template-2(info, index)
+		-if (index == 0)
+			.panel(class='panel-#{index} panel-big')
+				p.title= info.title
+				i.short-line
+				p.discount= info.discount
+				a.btn-go(href="#{info.link}" target="_blank")
+				img.goods(src="#{info.goods}")
+		-else
+			.panel(class='panel-#{index} panel-normal')
+				a(href="#{info.link}" target="_blank")
+					img.img-goods(src="#{info.goods}")
+					span.discount= info.discount
+				.goods-info
+					p.title= info.title
+					a.to-store.text-center(href="#{info.link}" target="_blank") 进店看看
+						i.icon-arrow-right
+	
+	
+	body
+		include ./assets/template/header
+		include ./assets/template/parts
+		include ./assets/template/footer
+
+
+
+
+script(src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js")
+script(src="https://cdn.bootcss.com/unslider/2.0.3/js/unslider-min.js")
+script(src="./december.js")
+	

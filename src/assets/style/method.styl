@@ -1,0 +1,31 @@
+-pos(type, args)
+  i = 0
+  position unquote(type)
+  {args[i]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+  {args[i += 1]} : args[i + 1] is a 'unit' ? args[i += 1] : 0
+
+absolute()
+  -pos('absolute', arguments)
+
+fixed()
+  -pos('fixed', arguments)
+
+// Mixin itself
+clearfix()
+  &:before,
+  &:after
+    content: " ";
+    display: table;
+  &:after
+    clear: both;
+
+panel-spacing(mt, ml)
+  mt = unit(mt, px)
+  ml = unit(ml, px)
+  float: left
+  margin-top: mt
+  margin-left: ml
+
+no-wrap()
+  white-space: nowrap;
+  overflow: hidden;

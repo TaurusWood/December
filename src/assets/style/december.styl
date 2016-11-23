@@ -1,0 +1,157 @@
+@import "./layout"
+@import "./component"
+@import "./common"
+@import "../../public/library/unslider/unslider.styl"
+@import "../../public/library/unslider/unslider-dots.styl"
+
+header
+  background-color #590fb9
+  max-width 1920px
+  min-width 1230px
+  overflow: hidden;
+  clearfix()
+  .head-line
+    position: relative;
+    height: 60px
+    img
+      absolute: bottom 0
+  .head-banner
+    width 990px
+    height 360px
+    margin 20px auto
+    position relative
+    i.icon-surge-big
+      background-image: url(./images/sprite.png);
+      &.left
+        absolute: top 50px left -125px
+        width: 109px
+        height: 254px
+        background-position: -501px -220px
+      &.right
+        absolute: top 86px right -170px
+        width: 155px
+        height: 220px
+        background-position: -501px 0
+    #slider
+      height 360px
+  section.part-top
+    margin-bottom: 28px
+    .panel
+      width: 323px;
+      height: 200px;
+      panel-spacing(10, 10)
+      &.panel-0
+      &.panel-3
+      &.panel-6
+        margin-left: 0
+      a.btn-go
+        background-image: url(./images/sprite.png);
+        background-position: -501px -685px;
+        width: 55px;
+        height: 55px;
+        absolute: bottom 5px right 8px;
+
+section.part-one
+  margin-top: -18px
+  position: relative
+  .panel
+    height: 290px
+    .goods-info
+      height: 100px
+
+section.part-last
+  .panel
+    height: 260px
+    .goods-info
+      height: 70px
+
+section.part-two
+  .panel
+    width: 240px
+    height: 336px
+    background-color: #FFF
+    panel-spacing(10, 10)
+    &.panel-0
+    &.panel-4
+      margin-left: 0
+    .img-goods
+      height: 240px
+    .goods-info
+      height: 95px
+      position: relative;
+      img.img-logo
+        width: 105px
+        height: 45px
+        absolute: left 0 right 0
+        top: -(45/2)px
+        margin: auto
+        border-radius: (45/2)px
+        box-shadow: 0px 2px 9px 3px #e8e6e6;
+      p
+        no-wrap()
+        width: 100%
+        &.store
+          absolute: bottom 30px
+        &.discount
+          font-size: 16px
+          color: #E9023E
+          absolute: bottom 0
+
+section.part-main
+  .section-0
+    a.to-store
+      background-color: #EF55BD
+  .section-1
+    a.to-store
+      background-color: #05DCAA
+  .section-2
+    a.to-store
+      background-color: #FB724A
+  .section-3
+    a.to-store
+      background-color: #13D058
+  .section-4
+    a.to-store
+      background-color: #EF60BD
+  .section-5
+    a.to-store
+      background-color: #FBA303
+  .section-6
+    a.to-store
+      background-color: #5A82FD
+  .section-7
+    a.to-store
+      background-color: #5A82FD
+
+footer
+  margin-top: 170px
+  border-top: 1px solid #FFF
+  background-color: #000
+  color: #FFF
+  padding: 75px 0
+  img
+    width: initial
+    height: initial
+  a
+    color: #FFF
+    display: inline-block;
+  p
+    height: 25px
+    line-height: 25px
+  p.company-info
+    span
+      margin-right: 40px
+  p.police
+    position: relative;
+    padding-left: 10px
+    img
+      absolute: top 2px
+    a
+      margin-right: 10px
+  p.copyright
+    a
+      margin: 0 10px
+  p.websiter
+    margin-top: 10px
+    img
+      margin-right: 60px

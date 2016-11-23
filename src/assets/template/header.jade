@@ -1,0 +1,20 @@
+header
+  .head-title#top
+    img(src="./images/head-title.png")
+  .head-banner
+    i.icon-surge-big.right
+    i.icon-surge-big.left
+    #slider
+      ul
+        each item,i in bannerImg
+          li
+            a(href="javascript:void(0);")
+              img(src="#{item}", class="banner-img-#{i}", alt="banner")
+  section.parts.part-top#part-top
+    mixin panel-template-title('必抢好物')
+    .part-content
+      each item,i in partTop
+        mixin panel-template-top(item,i)
+  .head-line
+    img(src="./images/head-line.png", alt="line")
+    
