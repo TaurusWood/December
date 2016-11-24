@@ -23,12 +23,19 @@ $(function() {
 
   // side nav scroll screen
   var sideNavInitTop = $sideNav.offset().top;
+  var lastTop = $('#part-last').offset().top;
   $(window).scroll(function() {
     var windowTop = $(window).scrollTop();
-    if (windowTop > sideNavInitTop - 120) {
+    if (windowTop > sideNavInitTop - 120 && windowTop <= lastTop - 120) {
       $sideNav.css({
         'position': 'fixed',
         'top': 120
+      });
+    } else if (windowTop > lastTop - 120) {
+      $sideNav.css({
+        'position': 'fixed',
+        'top': 'initial',
+        'bottom': 300
       });
     } else {
       $sideNav.css({
@@ -37,4 +44,4 @@ $(function() {
       })
     }
   })
-})
+});

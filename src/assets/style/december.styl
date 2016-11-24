@@ -51,6 +51,23 @@ header
         height: 55px;
         absolute: bottom 5px right 8px;
 
+
+i.icon-full-page
+  background-image: url(./images/sprite.png);
+  height: 7555px;
+  display block
+  position absolute
+  z-index -10
+  &.left
+    background-position: 0 0;
+    width: 501px;
+    left 20px
+  &.right
+    background-position: 0px -7555px;
+    width: 412px;
+    right 20px
+
+
 section.part-one
   margin-top: -18px
   position: relative
@@ -86,7 +103,7 @@ section.part-two
         top: -(45/2)px
         margin: auto
         border-radius: (45/2)px
-        box-shadow: 0px 2px 9px 3px #e8e6e6;
+        box-shadow: 0 2px 9px 3px #e8e6e6;
       p
         no-wrap()
         width: 100%
@@ -126,7 +143,7 @@ section.part-main
 footer
   margin-top: 170px
   border-top: 1px solid #FFF
-  background-color: #000
+  background-color: #17121a
   color: #FFF
   padding: 75px 0
   img
@@ -143,9 +160,10 @@ footer
       margin-right: 40px
   p.police
     position: relative;
-    padding-left: 10px
+    width: 410px;
+    margin: 10px auto;
     img
-      absolute: top 2px
+      absolute: top 2px left 10px
     a
       margin-right: 10px
   p.copyright

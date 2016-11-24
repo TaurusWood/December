@@ -7,7 +7,7 @@ const plugins = require('gulp-load-plugins')();
 
 const srcDir = './src/';
 const assetsDir = srcDir + 'assets/';
-const publicImg = srcDir + 'public/images/'
+const publicImg = srcDir + 'public/images/';
 const dataDir = srcDir + 'data/';
 const distDir = './dist/';
 
@@ -49,11 +49,19 @@ gulp.task('miniJs', function() {
 		}))
 });
 
+gulp.task('library', function () {
+	return gulp.src(srcDir + 'public/library/**')
+	.pipe(gulp.dest(distDir + 'library/'))
+	.pipe(browserSync.reload({
+		stream: true
+	}))
+});
+
 gulp.task('image', function() {
 	return gulp.src(publicImg + '*.png')
 	// .pipe(plugins.imagemin())
 	.pipe(gulp.dest(distDir + 'images/'))
-})
+});
 
 gulp.task('sprite', function() {
 	const spriteData = gulp.src(publicImg + 'sprite/*.png')
@@ -64,12 +72,12 @@ gulp.task('sprite', function() {
 	const imgStream = spriteData.img
 		.pipe(plugins.buffer())
 		.pipe(plugins.imagemin())
-		.pipe(gulp.dest(publicImg))
+		.pipe(gulp.dest(publicImg));
 	const cssStream = spriteData.css
-		.pipe(gulp.dest(assetsDir))
+		.pipe(gulp.dest(assetsDir));
 
 	return merge(imgStream, cssStream);
-})
+});
 
 gulp.task('clean', function() {
 	return gulp.src(
@@ -80,7 +88,7 @@ gulp.task('clean', function() {
 		.pipe(plugins.clean())
 });
 
-gulp.task('compile', plugins.sequence('clean', ['view', 'stylus', 'miniJs', 'image']));
+gulp.task('compile', plugins.sequence('clean', ['view', 'stylus', 'miniJs', 'image', 'library']));
 
 
 gulp.task('default', ['compile'], function() {
