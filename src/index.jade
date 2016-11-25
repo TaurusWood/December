@@ -2,6 +2,7 @@ doctype html
 html
 	head
 		title 史雯露大馍王-双十二妙品吧狂欢购物节
+		meta(http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1")
 		meta(name="keywords", content="妙品吧、双十二、狂欢购物")
 		meta(name="description", content="妙品全球狂欢购物节，史雯露大魔王")
 		link(rel="stylesheet", href="./library/hover/hover.min.css")
@@ -18,12 +19,13 @@ html
 
 	mixin panel-template-top(info, index)
 		.panel(class='panel-#{index}')
-			img.img-goods(src="#{info.src}")
-			p.activity
-			p.discount
-			- if (info.price)
-				span.price= info.price
-			a.btn-go.hvr-pulse(href="javascript:void(0);", target="_blank")
+			a(href="#{info.link}" target="_blank")
+				img.img-goods(src="#{info.goods}")
+				p.activity
+				p.discount
+				- if (info.price)
+					span.price= info.price
+				a.btn-go.hvr-pulse(href="javascript:void(0);", target="_blank")
 
 	mixin panel-template-1(info, index, last)
 		.panel.hvr-bob(class='panel-#{index}')
