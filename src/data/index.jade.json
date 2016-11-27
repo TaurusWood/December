@@ -1,14 +1,14 @@
 {
   "partTop": [
-    {"src": "https://fakeimg.pl/320x200/f052a9/fff/?text=Goods&font=museo"},
-    {"src": "https://fakeimg.pl/320x200/f02219/fff/?text=Goods&font=museo"},
-    {"src": "https://fakeimg.pl/320x200/1cdbaf/fff/?text=Goods&font=museo"},
-    {"src": "https://fakeimg.pl/320x200/eef565/fff/?text=Goods&font=museo"},
-    {"src": "https://fakeimg.pl/320x200/1c38d9/fff/?text=Goods&font=museo"},
-    {"src": "https://fakeimg.pl/320x200/eb9e38/fff/?text=Goods&font=museo"},
-    {"src": "https://fakeimg.pl/320x200/1c38d9/fff/?text=Goods&font=museo"},
-    {"src": "https://fakeimg.pl/320x200/1cdbaf/fff/?text=Goods&font=museo"},
-    {"src": "https://fakeimg.pl/320x200/50ed13/fff/?text=Goods&font=museo"}
+    {"link": "javascript:void(0);", "goods": "https://fakeimg.pl/320x200/f052a9/fff/?text=Goods&font=museo"},
+    {"link": "javascript:void(0);", "goods": "https://fakeimg.pl/320x200/f02219/fff/?text=Goods&font=museo"},
+    {"link": "javascript:void(0);", "goods": "https://fakeimg.pl/320x200/1cdbaf/fff/?text=Goods&font=museo"},
+    {"link": "javascript:void(0);", "goods": "https://fakeimg.pl/320x200/eef565/fff/?text=Goods&font=museo"},
+    {"link": "javascript:void(0);", "goods": "https://fakeimg.pl/320x200/1c38d9/fff/?text=Goods&font=museo"},
+    {"link": "javascript:void(0);", "goods": "https://fakeimg.pl/320x200/eb9e38/fff/?text=Goods&font=museo"},
+    {"link": "javascript:void(0);", "goods": "https://fakeimg.pl/320x200/1c38d9/fff/?text=Goods&font=museo"},
+    {"link": "javascript:void(0);", "goods": "https://fakeimg.pl/320x200/1cdbaf/fff/?text=Goods&font=museo"},
+    {"link": "javascript:void(0);", "goods": "https://fakeimg.pl/320x200/50ed13/fff/?text=Goods&font=museo"}
   ],
   "bannerImg": [
     "https://fakeimg.pl/990x360/b3d91c/fff/?text=banner1&font=museo",
