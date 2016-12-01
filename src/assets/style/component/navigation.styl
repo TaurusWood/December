@@ -1,0 +1,46 @@
+aside
+  width: 100%
+  height: rem(60)
+  position: relative;
+  background-color #F4EEFC
+  z-index: 100
+  #navigation
+    position: absolute;
+    overflow: hidden;
+    height: rem(60);
+    width: 100%
+    .icon-arrow
+      display: block;
+      width: rem(60);
+      height: rem(60);
+      background-size: 100%
+      absolute right 0.36rem
+      transition: background-image 0.5s
+      &.up
+        background-image: url(./images/arrow-up.png);
+      &.down
+        background-image: url(./images/arrow-down.png);
+    ul
+      background-color #F4EEFC
+      li
+        width: rem(690)
+        height: rem(60)
+        margin: 0 auto;
+        a
+          height: 100%
+          display: inline-block;
+          text-align: center;
+          padding: 0.18rem 0
+          width: rem(630/4)
+          position: relative
+          color: #333
+          font-size: rem(28)
+          &.active
+            color: #F63676
+            &:before
+              absolute top 0.1rem left -0.1rem
+              content: " "
+              background: url(./images/location.png) no-repeat;
+              background-size: 100%
+              width: rem(30);
+              height: rem(60);

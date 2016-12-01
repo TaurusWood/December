@@ -1,0 +1,45 @@
+@import "../component/method"
+
+header
+  background-color #590fb9
+  width: 100%
+  overflow: hidden;
+  clearfix()
+  .head-title
+    margin-bottom: rem(20)
+  .head-line
+    position: relative;
+    height: rem(30)
+    img
+      absolute: bottom 0 left 0
+  .head-banner
+    width rem(690)
+    height rem(260)
+    margin 0 auto
+    position relative
+    #slider
+      height rem(260)
+  section.part-top
+    margin-bottom: rem(28)
+    .panel
+    & img
+      border-radius: 0.18rem
+    .panel
+      &:nth-child(1)
+      &:nth-child(3)
+      &:nth-child(5)
+        margin-left: 0
+      &:nth-last-child(3)
+        margin-left: 0
+      for i in 1 2 3 4 5 6
+        &:nth-child({i})
+          width: rem(340)
+          height: rem(220)
+          i.btn-go
+            absolute: bottom 0.26rem right 0.16rem
+      for i in 7 8 9
+        &:nth-child({i})
+          width: rem(225)
+          height: rem(225)
+          i.btn-go
+            absolute: bottom 0.6rem left 0.16rem

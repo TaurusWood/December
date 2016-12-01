@@ -1,0 +1,108 @@
+@import "../component/method"
+
+section.part-one
+  margin-top: rem(-18)
+section.part-last
+  margin-bottom: rem(55)
+
+section.part-one
+section.part-last
+  .panel
+    width: rem(224)
+    height: rem(322)
+    background-color: #EF1F65
+    .img-goods
+      height: rem(224)
+    .goods-info
+      height: rem(100)
+      padding: 0.1rem 0.05rem
+      p
+        no-wrap()
+        &.store
+          color: #fff
+        &.discount
+          color: #FAD232
+          font-size: 12px
+    &:nth-child(1)
+    &:nth-child(4)
+    &:nth-child(7)
+    &:nth-child(10)
+      margin-left: 0
+
+section.part-two
+  .panel
+  & a
+    width: rem(340)
+    height: rem(220)
+    img
+      border-radius: 0.18rem
+    i.btn-go
+      absolute: bottom 0.6rem left 0.16rem
+    &:nth-child(2n+1)
+      margin-left: 0
+
+section.parts.part-main
+  .section
+    margin-bottom: rem(10)
+    .part-content
+      a.panel
+      & img
+        border-radius: 0.18rem
+      .panel-big
+        width: rem(340)
+        height: rem(220)
+        margin-left: 0
+        padding-top: rem(20)
+        padding-left: rem(20)
+        p.title
+          font-size: rem(30)
+          color: #FFF
+        i.short-line
+          display: block;
+          background-color: #FFF
+          width: rem(30)
+          height: rem(5)
+          margin-bottom: rem(10)
+        p.discount
+          no-wrap()
+          font-size: rem(20)
+          color: #FAD232
+        i.btn-go
+          absolute: bottom 0.8rem left rem(20);
+        img.goods
+          absolute: top 0 left 0
+          z-index: -1
+      .panel-normal
+        width: rem(165)
+        height: rem(220)
+        overflow hidden
+        img.img-goods
+          height: rem(180)
+          border-radius: 0.18rem
+        .title
+          margin: 0
+          color: #FFF
+          font-size: 12px;
+          text-align: center;
+          padding: 0.02rem 0.1rem
+          border-bottom-left-radius: 0.18rem
+          border-bottom-right-radius: 0.18rem
+          height: rem(40)
+        &:nth-child(2)
+        &:nth-child(3)
+          background-color: #01CBDA
+        &:nth-child(4)
+        &:nth-child(5)
+          background-color: #FC8B01
+        &:nth-child(6)
+        &:nth-child(7)
+          background-color: #B505DE
+        &:nth-child(8)
+        &:nth-child(9)
+          background-color: #3873F1
+        &:nth-child(10)
+        &:nth-child(11)
+          background-color: #F74B16
+        &:nth-child(4)
+        &:nth-child(8)
+          margin-left: 0

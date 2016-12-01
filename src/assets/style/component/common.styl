@@ -1,0 +1,52 @@
+@import "./method"
+
+.text-center
+  text-align: center;
+
+section.parts
+  width: rem(690);
+  margin: 0 auto;
+  .part-content
+    clearfix()
+    .panel
+      panel-spacing(0.1, 0.1)
+      position: relative;
+
+// mixin panel
+.panel-title
+  position relative
+  text-align: center;
+  margin: 0.2rem auto;
+  width: rem(375);
+  height: rem(60);
+  i.icon-surge
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: rem(70)
+    height: rem(60)
+    &.left
+      background-image: url(./images/surge-left.png);
+      left: 0;
+    &.right
+      background-image: url(./images/surge-right.png);
+      right: 0;
+  .title
+    font-size: 0;
+    padding: 2px 0;
+    color: #FFF;
+    font-weight: 500;
+    h4
+      display: inline-block;
+      font-size: rem(38);
+      margin 0 rem(10)
+    span.side
+      font-size: rem(46);
+
+i.btn-go
+  background-image: url(./images/circle-arrow-btn.png);
+  width: rem(88)
+  height: rem(36)
+  background-size: contain;
+  background-repeat: no-repeat;

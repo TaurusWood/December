@@ -1,0 +1,45 @@
+-pos(type, args)
+  i = 0
+  position unquote(type)
+  {args[i]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+  {args[i += 1]} : args[i + 1] is a 'unit' ? args[i += 1] : 0
+
+absolute()
+  -pos('absolute', arguments)
+
+fixed()
+  -pos('fixed', arguments)
+
+// Mixin itself
+clearfix()
+  &:before,
+  &:after
+    content: " ";
+    display: table;
+  &:after
+    clear: both;
+
+panel-spacing(mt, ml)
+  mt = unit(mt, 'rem')
+  ml = unit(ml, 'rem')
+  float: left
+  margin-top: mt
+  margin-left: ml
+
+no-wrap()
+  white-space: nowrap;
+  overflow: hidden;
+
+rem(val)
+  unit(val/75, 'rem')
+
+//$spriteWidth 雪碧图的宽度px
+//$spriteHeight 雪碧图的高度px
+//$iconWidth 需要显示icon的宽度px
+//$iconHeight 需要显示icon的高度px
+//$iconX icon的原始x坐标
+//$iconY icon的原始y坐标
+// bgPosition($spriteWidth, $spriteHeight, $iconWidth, $iconHeight, $iconX, $iconY){
+//
+//     background-position: (($iconX / ($spriteWidth - $iconWidth)) * 100% ($iconY / ($spriteHeight - $iconHeight)) * 100%);
+// }
