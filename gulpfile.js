@@ -63,22 +63,6 @@ gulp.task('image', function() {
 	.pipe(gulp.dest(distDir + 'images/'))
 });
 
-gulp.task('sprite', function() {
-	const spriteData = gulp.src(publicImg + 'sprite/*.png')
-		.pipe(plugins.spritesmith({
-			imgName: 'sprite.png',
-			cssName: 'sprite.css'
-		}));
-	const imgStream = spriteData.img
-		.pipe(plugins.buffer())
-		.pipe(plugins.imagemin())
-		.pipe(gulp.dest(publicImg));
-	const cssStream = spriteData.css
-		.pipe(gulp.dest(assetsDir));
-
-	return merge(imgStream, cssStream);
-});
-
 gulp.task('clean', function() {
 	return gulp.src(
 		['!./dist/images', '!./dist/images/**', './dist/**/*'],
@@ -105,6 +89,6 @@ gulp.task('default', ['compile'], function() {
 		logPrefix: '爸爸告诉你'
 	});
 	gulp.watch([srcDir + '*.jade', assetsDir + 'template/**'], ['view']);
-	gulp.watch(assetsDir + 'style/*.styl', ['stylus']);
+	gulp.watch(assetsDir + 'style/**/*', ['stylus']);
 	gulp.watch(assetsDir + 'js/*.js', ['miniJs']);
 });

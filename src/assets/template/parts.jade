@@ -1,11 +1,8 @@
-i.icon-full-page.left
-i.icon-full-page.right
 section.parts.part-one#part-1
   mixin panel-template-title('超值尖货')
   .part-content
-    include ./navigation
     each item,i in partOne
-      mixin panel-template-1(item, i)
+      mixin panel-template-2(item, i)
 
 section.parts.part-two#part-2
   mixin panel-template-title('超级大牌')
@@ -19,10 +16,10 @@ section.parts.part-main
     .section(class="section-#{index}" id="section-#{index}")
       .part-content
         each item,i in group
-          mixin panel-template-2(item, i)
+          mixin panel-template-3(item, i)
 
 section.parts.part-last#part-last
   mixin panel-template-title('特殊会场')
   .part-content
     each item,i in partLast
-      mixin panel-template-1(item, i, 'last')
+      mixin panel-template-2(item, i)
