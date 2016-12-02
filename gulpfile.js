@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const path = require('path');
-const merge = require('merge-stream');
 const browserSync = require('browser-sync').create();
 const plugins = require('gulp-load-plugins')();
 
