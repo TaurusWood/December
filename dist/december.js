@@ -25,12 +25,12 @@ $(function() {
     var $this = $(this);
     if ($this.hasClass('down')) {
       $nav.animate({
-        height: '2.4rem'
+        height: '3rem'
       }, 500)
       animateArrow('down', 'up');
     } else if ($this.hasClass('up')) {
       $nav.animate({
-        height: '0.8rem'
+        height: '1rem'
       }, 500)
       animateArrow('up', 'down')
     }
@@ -64,7 +64,12 @@ $(function() {
       .siblings().removeClass('active')
       .parent().siblings().children().removeClass('active');
   }
-
+  // 滚动时隐藏导航栏下拉菜单
+  function hideNav() {
+    if ($arrow.hasClass('up')) {
+      $arrow.trigger('click');
+    }
+  }
   // 节流函数
   /**
    * @param fun    要执行的函数
@@ -146,14 +151,9 @@ $(function() {
         'position': 'absolute'
       })
     }
-
-    // 滚动时隐藏导航栏下拉菜单
-    if ($arrow.hasClass('up')) {
-      $arrow.trigger('click');
-    }
-
   })
-  window.addEventListener('scroll', throttle(lazyLoad, 300, 700));
+  window.addEventListener('scroll', throttle(hideNav, 100, 500));
+  window.addEventListener('scroll', throttle(lazyLoad, 100, 100));
   window.addEventListener('scroll', throttle(cutNavStyle, 200, 200));
   window.addEventListener('scroll', throttle(cutNavFloor, 200, 200));
 });
